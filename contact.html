@@ -45,7 +45,7 @@
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
             const subject = name;
-            const body = `Message:\n${message}\n\nFrom: ${email}`;
+            const body = `You have received a new message from your website contact form.\n\nHere are the details:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
             window.location.href = `mailto:ameliahitchcock7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         }
     </script>
