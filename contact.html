@@ -23,6 +23,7 @@
     <main>
         <section>
             <h2>Get in Touch</h2>
+            <p>Please note that this form will open your email client to send the message. Do not include sensitive information.</p>
             <form id="contact-form" onsubmit="sendEmail(event)">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -43,8 +44,8 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            const subject = `Contact form submission from ${name}`;
-            const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+            const subject = name;
+            const body = `Message:\n${message}\n\nFrom: ${email}`;
             window.location.href = `mailto:ameliahitchcock7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         }
     </script>
